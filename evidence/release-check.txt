@@ -1,0 +1,56 @@
+MODELBOUNDARY_LAB_RELEASE_CHECK
+UTC=2026-10-18T11:42:53Z
+
+== Toolchain ==
+rustc 1.96.0 (ac68faa20 2026-05-25) (built from a source tarball)
+cargo 1.96.0 (30a34c682 2026-05-25) (built from a source tarball)
+Linux localhost 4.9.227-22521289 #2 SMP PREEMPT Thu Jan 12 20:45:59 KST 2023 aarch64 Android
+
+== Policy validation ==
+POLICY_JSON=PASS
+e1a657fe0f3bf1218ddcb679c9a61ec03203daddfe9732830471e21f4799c0d8  security/policy.json
+
+== Rust tests ==
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.17s
+     Running unittests src/main.rs (native/rust/mbl-sandbox/target/debug/deps/mbl_sandbox-753f8afbe2d4c981)
+
+running 2 tests
+test tests::filter_checks_architecture_before_syscall_number ... ok
+test tests::filter_denies_target_and_allows_other_syscalls ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+RUST_TESTS=PASS
+
+== Seccomp probe self-test ==
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
+     Running `native/rust/mbl-sandbox/target/debug/mbl-sandbox --self-test`
+RESULT=SECCOMP_BLOCK_CONFIRMED
+RESULT=RUST_SECCOMP_SELF_TEST_PASS
+SCOPE=NO_NEW_PRIVS_AND_GETPPID_DENIAL_ONLY
+SECCOMP_SELF_TEST=PASS
+
+== Python tests, if present ==
+PYTHON_IMPORT_ROOT=./src
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 1.502s
+
+OK
+PYTHON_TESTS=PASS
+
+== Artifact hashes ==
+1d15f19d89658cf479fab60285f86585237f99ab5511299b59871d3b9b55b8e1  native/rust/mbl-sandbox/src/main.rs
+c2fa9518e2068aa1ef92d3ad9a3aa73de90708139925620e4cd9f2227b55863f  native/rust/mbl-sandbox/Cargo.lock
+f7ce8c60daadfd9f197eb6bf27e9cdbe3458e0e9110dfb0637789c676336693c  native/rust/mbl-sandbox/target/debug/mbl-sandbox
+
+== Isolation status ==
+SECCOMP_SELECTED_SYSCALL=TESTED
+COMPREHENSIVE_SYSCALL_POLICY=NOT_VERIFIED
+FILESYSTEM_ISOLATION=NOT_VERIFIED
+NETWORK_ISOLATION=NOT_VERIFIED
+MODEL_RUNTIME_INTEGRATION=NOT_VERIFIED
+CROSS_PLATFORM_ENFORCEMENT=NOT_VERIFIED
+SANDBOX_STATUS=NOT_ESTABLISHED
+
+REPORT=evidence/release-check.txt

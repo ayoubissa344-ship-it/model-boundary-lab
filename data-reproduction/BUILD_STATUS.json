@@ -1,0 +1,10 @@
+{
+  "release": "0.4.0",
+  "evidence_class": "observed",
+  "cpp_probe": {"build": "passed", "runtime": "executed", "scope": "current process only"},
+  "typescript": {"build": "not run", "reason": "npm dependencies not installed in build environment"},
+  "rust": {"build": "not run", "reason": "rustc/cargo unavailable in build environment"},
+  "real_model_inference": {"status": "not run", "reason": "no verified local model weights and runtime dependencies"},
+  "landlock": {"status": "not established"},
+  "weight_confidentiality": {"status": "not tested"}
+}

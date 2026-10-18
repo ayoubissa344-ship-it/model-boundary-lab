@@ -1,0 +1,29 @@
+{
+  "schema_version": "mbl-model-candidates/1.0",
+  "purpose": "Candidate list for a local, pinned smoke-test matrix. Metadata was inspected through Hugging Face repository details; neither model was run as part of release v0.6.0.",
+  "models": [
+    {
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "parameters_approx": 134500000,
+      "architecture": "llama",
+      "license_observed": "apache-2.0",
+      "intended_role": "small CPU smoke-test candidate",
+      "inference_test_status": "NOT_RUN",
+      "source": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "parameters_approx": 494000000,
+      "architecture": "qwen2",
+      "license_observed": "apache-2.0",
+      "intended_role": "second architecture/size comparison candidate",
+      "inference_test_status": "NOT_RUN",
+      "source": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct"
+    }
+  ],
+  "limitations": [
+    "Hub metadata can change and should be rechecked at time of use.",
+    "License metadata shown here is not legal advice; inspect the repository card and attached artifacts before use.",
+    "Each experiment must use a resolved immutable revision; model IDs alone are not reproducible pins."
+  ]
+}

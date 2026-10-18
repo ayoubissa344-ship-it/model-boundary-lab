@@ -1,0 +1,57 @@
+name: ModelBoundary Lab CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust-probe:
+    name: Rust probe tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Validate security policy
+        run: python3 -m json.tool security/policy.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Run Python test suite
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests
+
+      - name: Run Rust tests
+        run: cargo test --manifest-path native/rust/mbl-sandbox/Cargo.toml
+
+      - name: Run seccomp self-test
+        run: cargo run --manifest-path native/rust/mbl-sandbox/Cargo.toml -- --self-test
+
+      - name: Check repository whitespace
+        run: git diff --check
+
+  documentation:
+    name: Release documentation checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify release documents
+        run: |
+          test -s docs/ARCHITECTURE.md
+          test -s docs/THREAT_MODEL.md
+          test -s docs/RELEASE_SCOPE.md
+          test -s RELEASE_NOTES.md
+          test -s scripts/release-check.sh
+          bash -n scripts/release-check.sh

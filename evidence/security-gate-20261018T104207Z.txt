@@ -1,0 +1,47 @@
+MODELBOUNDARY LAB SECURITY GATE
+UTC=2026-10-18T10:42:07Z
+DEVICE_ARCH=aarch64
+KERNEL=Linux 4.9.227-22521289
+
+=== 1. Rust tests ===
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.15s
+     Running unittests src/main.rs (native/rust/mbl-sandbox/target/debug/deps/mbl_sandbox-753f8afbe2d4c981)
+
+running 2 tests
+test tests::filter_denies_target_and_allows_other_syscalls ... ok
+test tests::filter_checks_architecture_before_syscall_number ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+RUST_TESTS=PASS
+
+=== 2. Runtime seccomp probe ===
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running `native/rust/mbl-sandbox/target/debug/mbl-sandbox --self-test`
+RESULT=SECCOMP_BLOCK_CONFIRMED
+RESULT=RUST_SECCOMP_SELF_TEST_PASS
+SCOPE=NO_NEW_PRIVS_AND_GETPPID_DENIAL_ONLY
+SECCOMP_PROBE=PASS
+
+=== 3. Process security state ===
+CapEff:	0000000000000000
+CapBnd:	0000000000000000
+Seccomp:	2
+
+=== 4. Namespace capability probe ===
+USER_NAMESPACE=UNAVAILABLE
+MOUNT_NAMESPACE=UNAVAILABLE
+NETWORK_NAMESPACE=UNAVAILABLE
+
+=== 5. Isolation claims ===
+FILESYSTEM_ISOLATION=NOT_VERIFIED
+NETWORK_ISOLATION=NOT_VERIFIED
+MODEL_RUNTIME_INTEGRATION=NOT_VERIFIED
+SANDBOX_STATUS=NOT_ESTABLISHED
+
+=== 6. Source and binary fingerprints ===
+1d15f19d89658cf479fab60285f86585237f99ab5511299b59871d3b9b55b8e1  native/rust/mbl-sandbox/src/main.rs
+f7ce8c60daadfd9f197eb6bf27e9cdbe3458e0e9110dfb0637789c676336693c  native/rust/mbl-sandbox/target/debug/mbl-sandbox
+
+GATE_RESULT=FAIL_CLOSED
+SECURITY_INTERPRETATION=REQUIRED_CAPABILITY_OR_TEST_MISSING

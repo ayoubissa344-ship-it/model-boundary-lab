@@ -1,0 +1,11 @@
+import { strict as a } from 'node:assert';
+import { validateEvidence, summarize, wilson95, binomialIntervalAllowed } from './evidence.js';
+const base={schema_version:'1.0',experiment_id:'fixture-1',evidence_class:'synthetic' as const,model_tested:false,independent_trials:false,checks:[{name:'policy',status:'PASS' as const,detail:'expected'}]};
+a.deepEqual(validateEvidence(base),[]);
+a.equal(validateEvidence({...base,model_tested:true}).length,1);
+a.deepEqual(summarize(base.checks),{PASS:1,FAIL:0,INCONCLUSIVE:0,SKIP:0});
+a.throws(()=>wilson95(2,1));
+a.throws(()=>binomialIntervalAllowed(false));
+a.doesNotThrow(()=>binomialIntervalAllowed(true));
+const ci=wilson95(10,10); a.ok(ci.low<1 && ci.high===1);
+console.log('TypeScript evidence tests passed (schema, summary, interval, and independence checks)');

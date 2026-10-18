@@ -1,0 +1,38 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+native/typescript/dist/
+build/
+runs/
+*.whl
+*.egg-info/
+.env
+.env.*
+*.safetensors
+pytorch_model*.bin
+
+# Local backups
+src/mbl/cli.py.pre-gguf-backup
+
+# Rust build artifacts
+target/
+**/target/
+
+# Python tooling and coverage
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local model artifacts
+*.gguf
+*.pt
+*.pth
+*.onnx
+
+# Local source backups; never publish these
+*.backup
+*.backup-*
+*.pre-*-backup

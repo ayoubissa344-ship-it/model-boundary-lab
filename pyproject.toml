@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "model-boundary-lab"
+version = "0.6.0"
+description = "A local-first CLI and dashboard for auditing model artifacts, runtime isolation signals, and reproducible LLM inference runs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE-RESEARCH.txt" }
+authors = [{ name = "ModelBoundary Lab contributors" }]
+keywords = ["AI security", "LLM", "model artifacts", "Linux isolation", "reproducibility"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+inference = ["torch>=2.2", "transformers>=4.48,<5", "safetensors>=0.4", "accelerate>=1.2"]
+dashboard = []
+test = ["pytest>=8"]
+
+[project.scripts]
+mbl = "mbl.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mbl = ["static/*.html"]

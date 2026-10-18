@@ -1,0 +1,987 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_class": "synthetic",
+  "model_tested": false,
+  "purpose": "protocol harness self-test; not evidence of actual model weight isolation",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "design": {
+    "repetitions": 20,
+    "cases_per_repetition": 6
+  },
+  "summary": {
+    "checks": 120,
+    "harness_checks_passed": 120,
+    "harness_checks_failed": 0,
+    "check_pass_fraction": 1.0,
+    "wilson_95_ci_for_harness_check_fraction": [
+      0.9689808335812966,
+      1.0
+    ]
+  },
+  "records": [
+    {
+      "case": "valid_infer",
+      "repetition": 1,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 1,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 1,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 1,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 1,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 1,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 2,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 2,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 2,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 2,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 2,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 2,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 3,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 3,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 3,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 3,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 3,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 3,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 4,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 4,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 4,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 4,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 4,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 4,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 5,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 5,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 5,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 5,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 5,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 5,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 6,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 6,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 6,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 6,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 6,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 6,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 7,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 7,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 7,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 7,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 7,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 7,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 8,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 8,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 8,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 8,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 8,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 8,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 9,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 9,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 9,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 9,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 9,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 9,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 10,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 10,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 10,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 10,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 10,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 10,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 11,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 11,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 11,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 11,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 11,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 11,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 12,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 12,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 12,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 12,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 12,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 12,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 13,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 13,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 13,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 13,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 13,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 13,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 14,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 14,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 14,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 14,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 14,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 14,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 15,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 15,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 15,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 15,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 15,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 15,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 16,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 16,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 16,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 16,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 16,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 16,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 17,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 17,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 17,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 17,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 17,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 17,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 18,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 18,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 18,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 18,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 18,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 18,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 19,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 19,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 19,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 19,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 19,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 19,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    },
+    {
+      "case": "valid_infer",
+      "repetition": 20,
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "reason": "allowlisted_request",
+      "harness_check_passed": true
+    },
+    {
+      "case": "unknown_field",
+      "repetition": 20,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "unknown_fields",
+      "harness_check_passed": true
+    },
+    {
+      "case": "read_weights_op",
+      "repetition": 20,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "operation_not_allowed",
+      "harness_check_passed": true
+    },
+    {
+      "case": "oversize_payload",
+      "repetition": 20,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_too_large",
+      "harness_check_passed": true
+    },
+    {
+      "case": "bad_payload_type",
+      "repetition": 20,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "payload_not_string",
+      "harness_check_passed": true
+    },
+    {
+      "case": "health_payload",
+      "repetition": 20,
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "reason": "health_payload_must_be_empty",
+      "harness_check_passed": true
+    }
+  ],
+  "content_sha256_before_hash": "91082265c77aceaa9abd44c30e7c720c0eb6d706f02a1c0f8c41ed55ab05e235"
+}

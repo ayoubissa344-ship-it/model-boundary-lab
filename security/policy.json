@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "project": "ModelBoundary Lab",
+  "profile": "strict",
+  "fail_closed": true,
+  "required_controls": {
+    "no_new_privs": true,
+    "seccomp_policy": true,
+    "filesystem_isolation": true,
+    "network_isolation": true,
+    "runtime_integration": true
+  },
+  "current_verified_scope": [
+    "Rust seccomp probe denies getppid with EPERM",
+    "Rust unit tests validate selected BPF instructions"
+  ],
+  "explicitly_unverified": [
+    "Comprehensive syscall restriction",
+    "Filesystem isolation",
+    "Network isolation",
+    "Isolation of the GGUF model runtime",
+    "Resistance to sandbox escape"
+  ],
+  "rule": "Never report sandboxed unless every required control is independently verified."
+}

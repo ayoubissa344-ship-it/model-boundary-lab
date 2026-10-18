@@ -1,0 +1,85 @@
+{
+  "project": "ModelBoundary Lab",
+  "release": "0.6.0",
+  "evidence_class": "observed_and_not_run",
+  "updated_utc": "2026-10-18",
+  "python": {
+    "unit_tests": {
+      "status": "PASSED",
+      "passed": 19,
+      "failed": 0,
+      "command": "PYTHONPATH=src python -m unittest discover -s tests -v"
+    },
+    "cli": {
+      "status": "PASSED",
+      "checks": [
+        "version",
+        "help",
+        "doctor"
+      ]
+    },
+    "wheel": {
+      "status": "BUILT",
+      "artifact": "model-boundary-lab-0.6.0-py3-none-any.whl",
+      "wheel_sha256": "8df158eb0a0e467047a7a2c398fbc14898eb3e08bad1485d18266bdb160b5287"
+    }
+  },
+  "dashboard": {
+    "status": "HTTP_SMOKE_PASSED",
+    "checks": [
+      "GET /",
+      "GET /api/health",
+      "GET /api/doctor",
+      "POST /api/audit-model with a synthetic fixture"
+    ],
+    "bind_policy": "loopback only",
+    "interpretation": "Functional smoke checks only; not a penetration test or security certification."
+  },
+  "typescript": {
+    "status": "PASSED",
+    "command": "cd native/typescript && npm test",
+    "checks": "TypeScript compile plus evidence schema, summary, Wilson interval and independent-trial guards"
+  },
+  "cpp_probe": {
+    "status": "BUILT_AND_EXECUTED_WITH_INCONCLUSIVE_CHECK",
+    "command": "cmake build followed by mbl-probe --jsonl",
+    "exit_code": 2,
+    "observations": 10,
+    "inconclusive_checks": [
+      "namespace.time"
+    ],
+    "scope": "current process observation only; not a sandbox test",
+    "interpretation": "A return code of 2 indicates at least one unavailable or inconclusive observation. It is not proof of isolation and not a security failure verdict."
+  },
+  "rust": {
+    "status": "NOT_RUN",
+    "reason": "Rust toolchain is not installed in the build environment."
+  },
+  "real_model_inference": {
+    "status": "NOT_RUN",
+    "model_tested": false,
+    "candidate_models_metadata_inspected": [
+      "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "Qwen/Qwen2.5-0.5B-Instruct"
+    ],
+    "reason": "No model weights were cached, Transformers/Accelerate were not installed, and model/package downloads could not be reached from this environment. Candidate metadata inspection is not an inference test."
+  },
+  "sandbox": {
+    "status": "NOT_AVAILABLE_IN_BUILD_ENVIRONMENT",
+    "bwrap_found": false,
+    "required_mode": "fails closed before model loading when Bubblewrap is unavailable",
+    "interpretation": "Sandbox command construction and fail-closed logic are unit-tested; actual Bubblewrap namespace execution was not tested in this environment."
+  },
+  "isolation_enforcement": {
+    "status": "NOT_ESTABLISHED",
+    "notes": "No verified kernel-enforced sandbox or complete host-attack resistance is claimed."
+  },
+  "weight_confidentiality": {
+    "status": "NOT_TESTED"
+  },
+  "zenodo": {
+    "doi": "10.5281/zenodo.23442798",
+    "url": "https://doi.org/10.5281/zenodo.23442798",
+    "relationship": "User-provided research/data record; DOI metadata not independently verified and the record was not modified by this build."
+  }
+}

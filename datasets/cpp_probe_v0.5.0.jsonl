@@ -1,0 +1,10 @@
+{"name":"namespace.user","status":"OBSERVED","detail":"user:[4026531837]"}
+{"name":"namespace.mnt","status":"OBSERVED","detail":"mnt:[4026532172]"}
+{"name":"namespace.net","status":"OBSERVED","detail":"net:[4026531833]"}
+{"name":"namespace.ipc","status":"OBSERVED","detail":"ipc:[4026532162]"}
+{"name":"namespace.uts","status":"OBSERVED","detail":"uts:[4026532163]"}
+{"name":"namespace.pid","status":"OBSERVED","detail":"pid:[4026532171]"}
+{"name":"namespace.cgroup","status":"OBSERVED","detail":"cgroup:[4026532174]"}
+{"name":"namespace.time","status":"INCONCLUSIVE","detail":"unavailable:No such file or directory"}
+{"name":"process.no_new_privs","status":"OBSERVED","detail":"NoNewPrivs not confirmed"}
+{"name":"process.effective_capabilities","status":"OBSERVED","detail":"CapEff:\t00000000800405fb\nCapBnd:"}

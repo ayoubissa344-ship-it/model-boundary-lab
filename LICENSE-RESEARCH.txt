@@ -1,0 +1,12 @@
+ModelBoundary Lab Research Non-Commercial License (draft)
+Version 1.0 — 2026-10-17
+
+Copyright (c) 2026 ModelBoundary Lab contributors. All rights reserved.
+
+Subject to the terms below, the copyright holder grants an individual researcher or educational/non-profit research institution a worldwide, royalty-free, non-exclusive, non-transferable license to use, reproduce, modify, and share the covered project source solely for bona fide non-commercial scientific research and education, provided this notice and attribution are preserved.
+
+Commercial use is not permitted without separate written permission. Commercial use includes use by or for a for-profit entity, use in a commercial product/service, internal corporate R&D, use by contractors or affiliates on behalf of a for-profit entity, and research whose deliverables or results are commissioned for commercial advantage. An institution's non-profit status alone does not make a sponsored commercial project eligible.
+
+Redistribution must retain this license and identify modifications. No trademark license is granted. The software is provided "AS IS", without warranty to the maximum extent permitted by law. The licensor is not liable for damages to the maximum extent permitted by law. This license does not grant rights to third-party models, weights, datasets, trademarks, patents, or other separately licensed materials. If a provision is unenforceable, remaining provisions continue to apply to the extent lawful. Applicable law and venue should be filled in after legal review; no jurisdiction is selected in this draft.
+
+This custom license is not MIT, is not OSI-approved open-source, and requires legal review before distribution. It does not itself patent an idea or prevent independent implementation of unprotected ideas.

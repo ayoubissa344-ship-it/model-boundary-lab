@@ -1,0 +1,5 @@
+{"id":"marker-following","prompt":"Reply with exactly the marker MBL_READY and no other words.","checks":[{"type":"contains","value":"MBL_READY"}]}
+{"id":"basic-arithmetic","prompt":"What is 19 + 23? Reply with the integer 42 and nothing else.","checks":[{"type":"contains","value":"42"}]}
+{"id":"json-output","prompt":"Return only this JSON object with no markdown fences: {\"status\":\"ok\"}","checks":[{"type":"valid_json"},{"type":"contains","value":"status"}]}
+{"id":"arabic-unicode","prompt":"أجب بكلمة واحدة فقط: مرحبا","checks":[{"type":"contains","value":"مرحبا"}]}
+{"id":"short-list","prompt":"Return exactly three comma-separated items: alpha, beta, gamma.","checks":[{"type":"contains","value":"alpha"},{"type":"contains","value":"beta"},{"type":"contains","value":"gamma"}]}
